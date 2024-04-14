@@ -1,4 +1,4 @@
-﻿using DKDotNetCore.ConsoleApp;
+﻿using YZKDotnetCore.ConsoleApp;
 using System.Data;
 using System.Data.SqlClient;
 
