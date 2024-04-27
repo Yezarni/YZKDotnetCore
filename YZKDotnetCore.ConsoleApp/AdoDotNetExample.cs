@@ -13,8 +13,8 @@ namespace YZKDotnetCore.ConsoleApp
     {
         private readonly SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {
-            DataSource = "DESKTOP-07LAQVO",
-            InitialCatalog = "DotnetTrainingBatch4",
+            DataSource = "DESKTOP-G8G8Q7G",
+            InitialCatalog = "DotNetTrainingBatch4",
             UserID = "sa",
             Password = "sa@123"
         };
@@ -26,7 +26,7 @@ namespace YZKDotnetCore.ConsoleApp
             connection.Open();
             Console.WriteLine("Connection opened");
 
-            String query = "select * from table_blog";
+            String query = "select * from Tbl_Blog";
             SqlCommand cmd = new SqlCommand(query, connection);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -52,7 +52,7 @@ namespace YZKDotnetCore.ConsoleApp
             connection.Open();
             Console.WriteLine("Connection opened");
 
-            String query = "select * from table_blog where BlogId = @BlogId";
+            String query = "select * from Tbl_Blog where BlogId = @BlogId";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
@@ -80,7 +80,7 @@ namespace YZKDotnetCore.ConsoleApp
             SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
-            string query = @"INSERT INTO [dbo].[Table_Blog]
+            string query = @"INSERT INTO [dbo].[Tbl_Blog]
            ([BlogTitle]
            ,[BlogAuthor]
            ,[BlogContent])
@@ -104,7 +104,7 @@ namespace YZKDotnetCore.ConsoleApp
             SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
-            string query = @"UPDATE [dbo].[Table_Blog]
+            string query = @"UPDATE [dbo].[Tbl_Blog]
    SET [BlogTitle] = @BlogTitle
       ,[BlogAuthor] = @BlogAuthor
       ,[BlogContent] = @BlogContent
@@ -126,7 +126,7 @@ namespace YZKDotnetCore.ConsoleApp
             SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
-            string query = @"DELETE FROM [dbo].[Table_Blog]
+            string query = @"DELETE FROM [dbo].[Tbl_Blog]
       WHERE [BlogId] = @BlogId";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);

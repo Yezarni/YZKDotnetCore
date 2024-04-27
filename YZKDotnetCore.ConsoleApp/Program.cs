@@ -5,8 +5,8 @@ using System.Data.SqlClient;
 Console.WriteLine("Hello, World!");
 
 //SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder();
-//stringBuilder.DataSource = "DESKTOP-07LAQVO";
-//stringBuilder.InitialCatalog = "DotnetTrainingBatch4";
+//stringBuilder.DataSource = "DESKTOP-G8G8Q7G";
+//stringBuilder.InitialCatalog = "DotNetTrainingBatch4";
 //stringBuilder.UserID = "sa";
 //stringBuilder.Password = "sa@123";
 
@@ -14,7 +14,7 @@ Console.WriteLine("Hello, World!");
 //connection.Open();
 //Console.WriteLine("Connection opened");
 
-//String query = "select * from table_blog";
+//String query = "select * from Tbl_Blog";
 //SqlCommand cmd = new SqlCommand(query, connection);
 //SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
 //DataTable dt = new DataTable();
@@ -32,12 +32,15 @@ Console.WriteLine("Hello, World!");
 //    Console.WriteLine("---------------------------------");
 //}
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Read();
 //adoDotNetExample.Create("myTitle", "myAuthor", "myContent");
 //adoDotNetExample.Update(1002, "updatedTitle", "updatedAuthor", "updatedContent");
 //adoDotNetExample.Delete(1003);
-adoDotNetExample.Edit(1002);
-adoDotNetExample.Edit(1);
+//adoDotNetExample.Edit(1002);
+//adoDotNetExample.Edit(1);
 
-Console.ReadKey();
+DapperExample dapperExample = new DapperExample();
+dapperExample.Run();
+
+Console.ReadLine();
