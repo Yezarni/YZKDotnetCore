@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YZKDotnetCore.ConsoleApp
+namespace YZKDotnetCore.ConsoleApp.Services
 {
     internal static class ConnectionString
     {
@@ -17,8 +17,8 @@ namespace YZKDotnetCore.ConsoleApp
             DataSource = ".",
             InitialCatalog = "DotNetTrainingBatch4",
             UserID = "sa",
-            Password = "sa@123"
-
+            Password = "sa@123",
+            TrustServerCertificate = true,
 
 
         };

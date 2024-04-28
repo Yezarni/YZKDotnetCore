@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YZKDotnetCore.ConsoleApp
+namespace YZKDotnetCore.ConsoleApp.AdoDotnetExamples
 {
     internal class AdoDotNetExample
     {
@@ -26,7 +26,7 @@ namespace YZKDotnetCore.ConsoleApp
             connection.Open();
             Console.WriteLine("Connection opened");
 
-            String query = "select * from Tbl_Blog";
+            string query = "select * from Tbl_Blog";
             SqlCommand cmd = new SqlCommand(query, connection);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -52,7 +52,7 @@ namespace YZKDotnetCore.ConsoleApp
             connection.Open();
             Console.WriteLine("Connection opened");
 
-            String query = "select * from Tbl_Blog where BlogId = @BlogId";
+            string query = "select * from Tbl_Blog where BlogId = @BlogId";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@BlogId", id);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);

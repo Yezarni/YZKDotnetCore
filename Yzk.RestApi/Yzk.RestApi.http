@@ -1,0 +1,11 @@
+@Yzk.RestApi_HostAddress = http://localhost:5234
+
+GET {{Yzk.RestApi_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{Yzk.RestApi_HostAddress}}/todos/1
+Accept: application/json
+
+###

@@ -8,8 +8,10 @@ using System.Net.Http.Headers;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using YZKDotnetCore.ConsoleApp.Dos;
+using YZKDotnetCore.ConsoleApp.Services;
 
-namespace YZKDotnetCore.ConsoleApp
+namespace YZKDotnetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
@@ -22,13 +24,13 @@ namespace YZKDotnetCore.ConsoleApp
             //Edit(11);
 
             //Create("myTitle", "myAuthor", "myContent");
-           // Update (2002, "Title2", "Author2", "Content2");
+            // Update (2002, "Title2", "Author2", "Content2");
             Delete(2002);
         }
         private void Read()
         {
             using IDbConnection db = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
-            List<BlogDto> lst =  db.Query<BlogDto>("select * from Tbl_blog").ToList();
+            List<BlogDto> lst = db.Query<BlogDto>("select * from Tbl_blog").ToList();
 
             foreach (BlogDto item in lst)
             {
@@ -53,14 +55,14 @@ namespace YZKDotnetCore.ConsoleApp
             Console.WriteLine(item.BlogTitle);
             Console.WriteLine(item.BlogAuthor);
             Console.WriteLine(item.BlogContent);
-        } 
+        }
 
-        private void Create(string title , string author , string content )
+        private void Create(string title, string author, string content)
         {
             var item = new BlogDto
             {
-                BlogTitle = title ,
-                BlogAuthor = author ,
+                BlogTitle = title,
+                BlogAuthor = author,
                 BlogContent = content,
             };
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
@@ -78,11 +80,11 @@ namespace YZKDotnetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        private void Update (int id, string title, string author, string content)
-        { 
+        private void Update(int id, string title, string author, string content)
+        {
             var item = new BlogDto
             {
-                BlogId = id ,
+                BlogId = id,
                 BlogTitle = title,
                 BlogAuthor = author,
                 BlogContent = content,
@@ -99,7 +101,7 @@ namespace YZKDotnetCore.ConsoleApp
             Console.WriteLine(message);
         }
 
-        private void Delete (int id)
+        private void Delete(int id)
         {
             var item = new BlogDto
             {

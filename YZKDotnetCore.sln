@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		dotnettrainingbatch4.sql = dotnettrainingbatch4.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yznk.WebApi", "Yznk.WebApi\Yznk.WebApi.csproj", "{65522101-38C7-407A-AC78-62EAF63A8F15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{A3442E96-3B62-4292-94D7-883EB918184A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3442E96-3B62-4292-94D7-883EB918184A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3442E96-3B62-4292-94D7-883EB918184A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65522101-38C7-407A-AC78-62EAF63A8F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65522101-38C7-407A-AC78-62EAF63A8F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65522101-38C7-407A-AC78-62EAF63A8F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65522101-38C7-407A-AC78-62EAF63A8F15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

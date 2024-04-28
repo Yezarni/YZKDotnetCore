@@ -1,0 +1,6 @@
+@Yznk.WebApi_HostAddress = http://localhost:5156
+
+GET {{Yznk.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
