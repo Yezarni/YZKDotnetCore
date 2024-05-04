@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YZKDotnetCore.ConsoleApp.Services
+namespace YZKDotnetCore.WebApi
 {
     internal static class ConnectionString
     {

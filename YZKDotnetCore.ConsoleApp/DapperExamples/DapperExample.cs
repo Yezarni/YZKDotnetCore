@@ -19,13 +19,13 @@ namespace YZKDotnetCore.ConsoleApp.DapperExamples
 
         public void Run()
         {
-            // Read();
+            Read();
             // Edit(1);
             //Edit(11);
 
             //Create("myTitle", "myAuthor", "myContent");
-            // Update (2002, "Title2", "Author2", "Content2");
-            Delete(2002);
+            Update (1, "Title2 updated", "Author2", "Content2");
+            Delete(2002); // deleted here
         }
         private void Read()
         {
@@ -112,7 +112,7 @@ namespace YZKDotnetCore.ConsoleApp.DapperExamples
             using IDbConnection db = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
             int result = db.Execute(query, item);
 
-            string message = result > 0 ? "delecting successful." : "delecting failed.";
+            string message = result > 0 ? "deleting successful." : "deleting failed.";
             Console.WriteLine(message);
         }
     }

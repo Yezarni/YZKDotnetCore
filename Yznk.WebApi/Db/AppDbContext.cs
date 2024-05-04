@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using YZKDotnetCore.ConsoleApp.Services;
+using YZKDotnetCore.WebApi;
 using Yznk.WebApi.Model;
 
 namespace Yznk.WebApi.Db
