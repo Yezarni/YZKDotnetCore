@@ -12,71 +12,48 @@ using System.Reflection.Metadata;
 using YZKDotnetCore.WebApi;
 using Yznk.WebApi.Model;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using Yzk.share;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.Identity.Client;
+using static Yzk.share.AdoDotnetService;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Yznk.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogAdoDotnetcontroller : ControllerBase
+    public class BlogAdoDotnet2controller : ControllerBase
     {
-        public object ConnectionStrings { get; private set; }
+        private readonly AdoDotnetService _adoDotnetService = new AdoDotnetService();
+       // public object ConnectionStrings { get; private set; }
 
         [HttpGet]
         public IActionResult GetBlog()
         {
             string query = "select * from Tbl_Blog";
-            SqlConnection connection = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
-            connection.Open();
-
-            SqlCommand cmd = new SqlCommand(query, connection);
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sqlDataAdapter.Fill(dt);
-
-            connection.Close();
-            //Console.WriteLine("Connection closed");
-            List<BlogModel> lst = new List<BlogModel>();
-            foreach (DataRow dr in dt.Rows)
-            {
-                BlogModel blog = new BlogModel();
-                blog.BlogId = Convert.ToInt32(dr["BlogId"]);
-                blog.BlogTitle = Convert.ToString(dr["BlogTitle"]);
-                blog.BlogAuthor = Convert.ToString(dr["BlogAuthor"]);
-                blog.BlogContent = Convert.ToString(dr["BlogContent"]);
-                lst.Add(blog);
-            }
+            var lst = _adoDotnetService.Query<BlogModel>(query);
             return Ok(lst);
+           
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetBlog(int id)
+        public IActionResult GetBlog(int id, string query)
         {
-            string query = "select * from Tbl_Blog where Blogid = @Blogid";
-            SqlConnection connection = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
-            connection.Open();
-            Console.WriteLine("Connection opened");
+           // string query = "select * from Tbl_Blog where Blogid = @Blogid";
+           // AdoDotnetParameter[] parameters = new AdoDotnetParameter[1];
+          //  parameters[0] = new AdoDotnetParameter("@BlogId", id);
+          //  var lst = _adoDotnetService.QueryFirstOrDefault<BlogModel>(query, parameters);
+            
+            
+            var item = _adoDotnetService.QueryFirstOrDefault<BlogModel>(query,
+                new AdoDotnetParameter("@BlogId", id)
+                );
 
-
-            SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("BlogId", id);
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sqlDataAdapter.Fill(dt);
-
-            connection.Close();
-            if (dt.Rows.Count == 0)
+            if (item == null)
             {
                 return NotFound("no data found");
             }
-            DataRow dr = dt.Rows[0];
-            var item = new BlogModel();
-            {
-                blog.BlogId = Convert.ToInt32(dr["BlogId"]);
-                blog.BlogTitle = Convert.ToString(dr["BlogTitle"]);
-                blog.BlogAuthor = Convert.ToString(dr["BlogAuthor"]);
-                blog.BlogContent = Convert.ToString(dr["BlogContent"]);
-            }
-            return Ok(dt);
+            return Ok(item);
         }
         [HttpPost]
         public IActionResult CreateBlog(BlogModel blog)
@@ -89,16 +66,11 @@ namespace Yznk.WebApi.Controllers
            (@BlogTitle
            ,@BlogAuthor
            ,@BlogContent)";
-            SqlConnection connection = new SqlConnection(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
-            connection.Open();
-
-
-            SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@BlogTitle", blog.BlogTitle);
-            cmd.Parameters.AddWithValue("@BlogAuthor", blog.BlogAuthor);
-            cmd.Parameters.AddWithValue("@BlogContent", blog.BlogContent);
-            int result = cmd.ExecuteNonQuery();
-            connection.Close();
+            int result = _adoDotnetService.Execute(query,
+                new AdoDotnetParameter("@BlogTitle", blog.BlogTitle),
+                new AdoDotnetParameter("@BlogAuthor", blog.BlogAuthor),
+                new AdoDotnetParameter("@BlogContent", blog.BlogContent)
+                );
 
             string message = result > 0 ? "saving successful." : "saving failed.";
             // Console.WriteLine(message);
@@ -198,9 +170,8 @@ namespace Yznk.WebApi.Controllers
 
             string message = result > 0 ? "Deleting successful." : "Deleting failed.";
             return Ok(message);
-
-
         }
+        
 
 
     }

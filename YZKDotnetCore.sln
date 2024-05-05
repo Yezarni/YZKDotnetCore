@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		dotnettrainingbatch4.sql = dotnettrainingbatch4.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yznk.WebApi", "Yznk.WebApi\Yznk.WebApi.csproj", "{65522101-38C7-407A-AC78-62EAF63A8F15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yznk.WebApi", "Yznk.WebApi\Yznk.WebApi.csproj", "{65522101-38C7-407A-AC78-62EAF63A8F15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yzk.share", "Yzk.share\Yzk.share.csproj", "{77AA783D-251D-4CA7-A0D8-E0AA51C0DE7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{65522101-38C7-407A-AC78-62EAF63A8F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65522101-38C7-407A-AC78-62EAF63A8F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65522101-38C7-407A-AC78-62EAF63A8F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77AA783D-251D-4CA7-A0D8-E0AA51C0DE7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77AA783D-251D-4CA7-A0D8-E0AA51C0DE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77AA783D-251D-4CA7-A0D8-E0AA51C0DE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77AA783D-251D-4CA7-A0D8-E0AA51C0DE7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
