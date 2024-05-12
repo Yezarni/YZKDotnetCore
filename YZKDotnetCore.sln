@@ -12,7 +12,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yznk.WebApi", "Yznk.WebApi\Yznk.WebApi.csproj", "{65522101-38C7-407A-AC78-62EAF63A8F15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yzk.share", "Yzk.share\Yzk.share.csproj", "{77AA783D-251D-4CA7-A0D8-E0AA51C0DE7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yzk.share", "Yzk.share\Yzk.share.csproj", "{77AA783D-251D-4CA7-A0D8-E0AA51C0DE7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yzk.RestApiwithNlayer", "Yzk.RestApiwithNlayer\Yzk.RestApiwithNlayer.csproj", "{401D8337-B511-4EFC-AD27-4C015C53A9F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yzk.ConsoleAppHttpClientExample", "Yzk.ConsoleAppHttpClientExample\Yzk.ConsoleAppHttpClientExample.csproj", "{20DE1503-5897-4BE2-90AE-1798383ED1D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yzk.ConsoleAppRestClientExample", "Yzk.ConsoleAppRestClientExample\Yzk.ConsoleAppRestClientExample.csproj", "{EA7FAE4A-FA0E-4601-B36F-5E2F903D14A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +38,18 @@ Global
 		{77AA783D-251D-4CA7-A0D8-E0AA51C0DE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77AA783D-251D-4CA7-A0D8-E0AA51C0DE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77AA783D-251D-4CA7-A0D8-E0AA51C0DE7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{401D8337-B511-4EFC-AD27-4C015C53A9F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{401D8337-B511-4EFC-AD27-4C015C53A9F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{401D8337-B511-4EFC-AD27-4C015C53A9F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{401D8337-B511-4EFC-AD27-4C015C53A9F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20DE1503-5897-4BE2-90AE-1798383ED1D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20DE1503-5897-4BE2-90AE-1798383ED1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20DE1503-5897-4BE2-90AE-1798383ED1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20DE1503-5897-4BE2-90AE-1798383ED1D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7FAE4A-FA0E-4601-B36F-5E2F903D14A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7FAE4A-FA0E-4601-B36F-5E2F903D14A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7FAE4A-FA0E-4601-B36F-5E2F903D14A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7FAE4A-FA0E-4601-B36F-5E2F903D14A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

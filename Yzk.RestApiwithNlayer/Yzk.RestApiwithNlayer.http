@@ -1,0 +1,6 @@
+@Yzk.RestApiwithNlayer_HostAddress = http://localhost:5195
+
+GET {{Yzk.RestApiwithNlayer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
