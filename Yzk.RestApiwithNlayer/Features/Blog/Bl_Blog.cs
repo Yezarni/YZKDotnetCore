@@ -1,4 +1,6 @@
-﻿namespace Yzk.RestApiwithNlayer.Features.Blog
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Yzk.RestApiwithNlayer.Features.Blog
 {
     public class Bl_Blog
     {
@@ -32,6 +34,14 @@
             var result = _access.UpdateBlog(id, requestModel);
             return result;
         }
+
+        public int PatchBlog(int id, BlogModel requestModel)
+        {
+            var result = _access.PatchBlog(id, requestModel);
+            return result;
+        }
+
+
 
         public int DeleteBlog(int id)
         {

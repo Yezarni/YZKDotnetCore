@@ -11,7 +11,7 @@ namespace Yzk.ConsoleAppRestClientExample
 {
     internal class RestClientExample
     {
-        private readonly RestClient _client = new RestClient(new Uri("https//localhost:7230"));
+        private readonly RestClient _client = new RestClient(new Uri("https://localhost:7206"));
         private readonly string _blogEndPoint = "api/blog";
 
 

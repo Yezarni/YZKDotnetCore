@@ -10,7 +10,7 @@ namespace Yzk.ConsoleAppHttpClientExample
 {
     internal class HttpClientExample
     {
-        private readonly HttpClient _client = new HttpClient() { BaseAddress = new Uri("https//localhost:7230") };
+        private readonly HttpClient _client = new HttpClient() { BaseAddress = new Uri("https://localhost:7206/api/blog") };
         private readonly string _blogEndPoint = "api/blog";
 
 

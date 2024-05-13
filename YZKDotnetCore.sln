@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yzk.ConsoleAppHttpClientExa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yzk.ConsoleAppRestClientExample", "Yzk.ConsoleAppRestClientExample\Yzk.ConsoleAppRestClientExample.csproj", "{EA7FAE4A-FA0E-4601-B36F-5E2F903D14A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YzkProject.ConsoleAppHttpClient", "YzkProject.ConsoleAppHttpClient\YzkProject.ConsoleAppHttpClient.csproj", "{5E768528-F3B9-4039-ABF5-2E1F8C3F5D47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{EA7FAE4A-FA0E-4601-B36F-5E2F903D14A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA7FAE4A-FA0E-4601-B36F-5E2F903D14A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA7FAE4A-FA0E-4601-B36F-5E2F903D14A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E768528-F3B9-4039-ABF5-2E1F8C3F5D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E768528-F3B9-4039-ABF5-2E1F8C3F5D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E768528-F3B9-4039-ABF5-2E1F8C3F5D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E768528-F3B9-4039-ABF5-2E1F8C3F5D47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

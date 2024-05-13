@@ -53,33 +53,19 @@ namespace Yzk.RestApiwithNlayer.Features.Blog
             string message = result > 0 ? "updating successful." : "updating failed.";
             return Ok(message);
         }
-        //[HttpPatch]
-        //public IActionResult Patch(int id, BlogModel Blog)
-        //{
-        //    var item = _context.Blog.FirstOrDefault(x => x.BlogId == id);
-        //    if (item is null)
-        //    {
+        [HttpPatch("{id}")]
+        public IActionResult Patch(int id, BlogModel blog)
+        {
+            var item = _blog.GetBlog(id);
+            if (item == null)
+            {
+                return NotFound("No data found");
+            }
 
-        //        return NotFound("no data found");
-        //    }
-        //    if (string.IsNullOrEmpty(item.BlogTitle))
-        //    {
-        //        item.BlogTitle = Blog.BlogTitle;
-        //    }
-        //    if (string.IsNullOrEmpty(item.BlogAuthor))
-        //    {
-        //        item.BlogAuthor = Blog.BlogAuthor;
-        //    }
-        //    if (!string.IsNullOrEmpty(item.BlogContent))
-        //    {
-        //        item.BlogContent = Blog.BlogContent;
-        //    }
-
-
-        //    var result = _context.SaveChanges();
-        //    string message = result > 0 ? "updating successful." : "updating failed.";
-        //    return Ok(message);
-        //}
+            int result = _blog.PatchBlog(id, blog);
+            String message = result > 0 ? "Updating successful" : "Updating failed";
+            return Ok(message);
+        }
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
