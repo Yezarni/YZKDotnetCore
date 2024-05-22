@@ -26,6 +26,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yzk.pizzaApi", "Yzk.pizzaAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yzk.ConsoleAppRefitExample", "Yzk.ConsoleAppRefitExample\Yzk.ConsoleAppRefitExample.csproj", "{2E26849C-91DC-43FD-9FFF-7406B0296184}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yzk.WinFormsApp", "Yzk.WinFormsApp\Yzk.WinFormsApp.csproj", "{92A8F1C9-CFC2-41D3-A63D-DD62E6FCEC23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{2E26849C-91DC-43FD-9FFF-7406B0296184}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E26849C-91DC-43FD-9FFF-7406B0296184}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E26849C-91DC-43FD-9FFF-7406B0296184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A8F1C9-CFC2-41D3-A63D-DD62E6FCEC23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A8F1C9-CFC2-41D3-A63D-DD62E6FCEC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A8F1C9-CFC2-41D3-A63D-DD62E6FCEC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A8F1C9-CFC2-41D3-A63D-DD62E6FCEC23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
