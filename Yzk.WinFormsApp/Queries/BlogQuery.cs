@@ -16,5 +16,11 @@ namespace Yzk.WinFormsApp.Queries
            (@BlogTitle
            ,@BlogAuthor
            ,@BlogContent)";
+
+        public static string BlogUpdate { get; } = @"SELECT [BlogId]
+      ,[BlogTitle]
+      ,[BlogAuthor]
+      ,[BlogContent]
+  FROM [dbo].[Tbl_Blog]";
     }
 }
