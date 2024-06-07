@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Yzk.Nlayer.DataAccesses\Yzk.Nlayer.DataAccesses.csproj" />
+    <ProjectReference Include="..\YZKDotnetCore.NLayer.DataAccess\YZKDotnetCore.NLayer.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

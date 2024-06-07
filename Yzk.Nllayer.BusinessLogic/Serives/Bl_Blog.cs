@@ -1,21 +1,22 @@
 ﻿
-using Yzk.Nlayer.DataAccesses.Services;
-using Yzk.Nlayer.DataAccesses.Models;
+
+using DotNetTrainingBatch4.NLayer.DataAccess.Services;
+using YZKDotnetCore.NLayer.DataAccess.Model;
 
 namespace Yzk.Nllayer.BusinessLogic.Serives
 {
     public class Bl_Blog
     {
-        private readonly BlogDataAccess _access;
+        private readonly DA_Blog _access;
 
         public Bl_Blog()
         {
-            _access = new BlogDataAccess();
+            _access = new DA_Blog();
         }
 
         public List<BlogModel> GetBlogs()
         {
-            var lst = _access.GetBlog();
+            var lst = _access.GetBlogs();
             return lst;
         }
 
@@ -39,7 +40,7 @@ namespace Yzk.Nllayer.BusinessLogic.Serives
 
         public int PatchBlog(int id, BlogModel requestModel)
         {
-            var result = _access.PatchBlog(id, requestModel);
+            var result = _access.UpdateBlog(id, requestModel);
             return result;
         }
 
