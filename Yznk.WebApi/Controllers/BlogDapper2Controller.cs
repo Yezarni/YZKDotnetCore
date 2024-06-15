@@ -14,10 +14,17 @@ namespace Yznk.WebApi;
 [ApiController]
 public class BlogDapper2Controller : ControllerBase
 {
-    private readonly DapperService _dapperService =
-        new DapperService(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
+    //private readonly DapperService _dapperService =
+    //    new DapperService(ConnectionString.SqlConnectionStringBuilder.ConnectionString);
 
-   // public object ConnectionStrings { get; private set; }
+    private readonly DapperService _dapperService;
+
+    public BlogDapper2Controller(DapperService dapperService)
+    {
+        _dapperService = dapperService;
+    }
+
+    // public object ConnectionStrings { get; private set; }
 
     //read
     [HttpGet]

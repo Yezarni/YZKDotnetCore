@@ -13,8 +13,15 @@ using YZKDotnetCore.ConsoleApp.Services;
 
 namespace YZKDotnetCore.ConsoleApp.DapperExamples
 {
-    internal class DapperExample
+    public class DapperExample
     {
+        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder;
+
+        public DapperExample(SqlConnectionStringBuilder sqlConnectionStringBuilder)
+        {
+            _sqlConnectionStringBuilder = sqlConnectionStringBuilder;
+        }
+
         public int BlogId { get; private set; }
 
         public void Run()

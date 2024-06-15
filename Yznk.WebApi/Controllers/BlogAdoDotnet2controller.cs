@@ -24,8 +24,15 @@ namespace Yznk.WebApi.Controllers
     [ApiController]
     public class BlogAdoDotnet2controller : ControllerBase
     {
-        private readonly AdoDotnetService _adoDotnetService = new AdoDotnetService();
+       // private readonly AdoDotnetService _adoDotnetService = new AdoDotnetService();
        // public object ConnectionStrings { get; private set; }
+
+        private readonly AdoDotnetService _adoDotnetService;
+
+        public BlogAdoDotnet2controller(AdoDotnetService adoDotnetService)
+        {
+            _adoDotnetService = adoDotnetService;
+        }
 
         [HttpGet]
         public IActionResult GetBlog()

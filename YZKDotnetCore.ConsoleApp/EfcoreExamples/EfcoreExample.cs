@@ -8,14 +8,21 @@ using YZKDotnetCore.ConsoleApp.Dos;
 
 namespace YZKDotnetCore.ConsoleApp.EfcoreExamples
 {
-    internal class EfcoreExample
+    public class EfcoreExample
     {
-        private readonly AppDbContext db = new AppDbContext();
+        // private readonly AppDbContext db = new AppDbContext();
+
+        private readonly AppDbContext db;
+
+        public EfcoreExample(AppDbContext db)
+        {
+            this.db = db;
+        }
         public void Run()
         {
-            Read();
-            Edit(1);
-            Edit(11);
+            //Read();
+            //Edit(1);
+            //Edit(11);
             // Create("myTitle", "myAuthor", "myContent");
             // Update (2003, "Title2", "Author2", "Content2");
             Delete(2003);

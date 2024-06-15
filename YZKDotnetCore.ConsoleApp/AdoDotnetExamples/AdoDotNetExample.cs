@@ -9,20 +9,27 @@ using System.Threading.Tasks;
 
 namespace YZKDotnetCore.ConsoleApp.AdoDotnetExamples
 {
-    internal class AdoDotNetExample
+    public class AdoDotNetExample
     {
-        private readonly SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+        //private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
+        //{
+        //    DataSource = "DESKTOP-G8G8Q7G",
+        //    InitialCatalog = "DotNetTrainingBatch4",
+        //    UserID = "sa",
+        //    Password = "sa@123"
+        //};
+
+        private readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder;
+
+        public AdoDotNetExample(SqlConnectionStringBuilder sqlConnectionStringBuilder)
         {
-            DataSource = "DESKTOP-G8G8Q7G",
-            InitialCatalog = "DotNetTrainingBatch4",
-            UserID = "sa",
-            Password = "sa@123"
-        };
+            _sqlConnectionStringBuilder = sqlConnectionStringBuilder;
+        }
 
         public void Read()
         {
 
-            SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
             Console.WriteLine("Connection opened");
 
@@ -48,7 +55,7 @@ namespace YZKDotnetCore.ConsoleApp.AdoDotnetExamples
         public void Edit(int id)
         {
 
-            SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
             Console.WriteLine("Connection opened");
 
@@ -77,7 +84,7 @@ namespace YZKDotnetCore.ConsoleApp.AdoDotnetExamples
 
         public void Create(string title, string author, string content)
         {
-            SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
@@ -101,7 +108,7 @@ namespace YZKDotnetCore.ConsoleApp.AdoDotnetExamples
 
         public void Update(int id, string title, string author, string content)
         {
-            SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
             string query = @"UPDATE [dbo].[Tbl_Blog]
@@ -123,7 +130,7 @@ namespace YZKDotnetCore.ConsoleApp.AdoDotnetExamples
 
         public void Delete(int id)
         {
-            SqlConnection connection = new SqlConnection(sqlConnectionStringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
             string query = @"DELETE FROM [dbo].[Tbl_Blog]
